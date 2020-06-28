@@ -2,7 +2,8 @@ FROM node:current-alpine
 
 EXPOSE 8080
 
-COPY --chown=node ["app.js", "package.json", "/home/node/app/"]
+COPY --chown=node ["package.json", "/home/node/app/"]
+COPY --chown=node ["src", "/home/node/app/src"]
 WORKDIR "/home/node/app"
 
 USER node
